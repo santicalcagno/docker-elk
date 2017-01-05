@@ -12,7 +12,7 @@ services:
       - docker_elk
   logstash:
     build: logstash/
-    command: -f /etc/logstash/conf.d/
+    command: -w 2 -f /etc/logstash/conf.d/
     volumes:
       - ./logstash/config:/etc/logstash/conf.d
     ports:
@@ -21,6 +21,8 @@ services:
       - docker_elk
     depends_on:
       - elasticsearch
+    environment:
+      - LS_HEAP_SIZE=2048m
   kibana:
     build: kibana/
     volumes:
