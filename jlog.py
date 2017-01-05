@@ -6,8 +6,9 @@ import socket
 TCP_IP = '127.0.0.1'
 TCP_PORT = 5000
 BUFFER_SIZE = 1024
-MAX_LOGS = 100000
-# 100000 ~ 1min 30sec
+MAX_LOGS = 500000
+# 100000 ~ 1min 30sec parámetros normales
+# 500000 ~ 4min 50sec parámetros normales
 
 ip_srcs = ['192.168.140.6', '192.168.140.7', '192.168.140.8']
 
